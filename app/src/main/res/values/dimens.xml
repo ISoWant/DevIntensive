@@ -2,4 +2,64 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!--                    Mobile                  -->
+
+    <!-- Sizes -->
+
+    <!-- List:Screen edge left and right margins & Horizontal margins on mobile; -->
+    <!-- Detail view:Screen edge left and right margins-->
+    <dimen name="size_normal_16">16dp</dimen>
+    <!-- Detail view:Right-side icons coordinate with the floating action button-->
+    <dimen name="size_medium_32">32dp</dimen>
+    <!-- Navigation drawer:Side nav width -->
+    <dimen name="size_large_56">56dp</dimen>
+    <!-- List:Content associated with an icon or avatar left margin & Content left margin; -->
+    <!-- Detail view:Screen edge left and right margins -->
+    <dimen name="size_larger_72">72dp</dimen>
+
+    <!-- Spaces -->
+
+    <!--Space between content areas; -->
+    <dimen name="spacing_small_8">8dp</dimen>
+    <dimen name="spacing_normal_16">16dp</dimen>
+    <!-- List & Detail view:Status bar; -->
+    <dimen name="spacing_medial_24">24dp</dimen>
+    <!-- List:Subtitle; Navigation drawer:Account menu and list items; -->
+    <dimen name="spacing_medium_48">48dp</dimen>
+    <!-- List & Detail view:Toolbar; Navigation drawer:Navigation right margin-->
+    <dimen name="spacing_large_56">56dp</dimen>
+    <!-- List & Detail view:List item; -->
+    <dimen name="spacing_larger_72">72dp</dimen>
+
+    <!--                    Tablet                  -->
+
+    <!-- Space between content areas -->
+    <dimen name="indent_tablet_smallest_8">8dp</dimen>
+    <!-- Screen edge left and right margins and padding, status bar and space above list;-->
+    <dimen name="indent_tablet_smaller_24">24dp</dimen>
+    <!-- Card left and right padding -->
+    <dimen name="indent_tablet_small_32">32dp</dimen>
+    <!-- Subtitle, list item, and slider -->
+    <dimen name="indent_tablet_medial_48">48dp</dimen>
+    <!-- Icons’ vertical center distance from screen edge -->
+    <dimen name="indent_tablet_middle_52">52dp</dimen>
+    <!-- Toolbar and list item -->
+    <dimen name="indent_tablet_medium_64">64dp</dimen>
+    <!-- List item -->
+    <dimen name="indent_tablet_large_72">72dp</dimen>
+    <!-- Content left margin from screen edge and Title -->
+    <dimen name="indent_tablet_larger_80">80dp</dimen>
+    <!-- Card nav item left padding -->
+    <dimen name="indent_tablet_largest_96">96dp</dimen>
+    <!-- Nav item left padding from screen edge -->
+    <dimen name="indent_tablet_great_104">104dp</dimen>
+
+    <!--                    Touch target size                   -->
+
+    <dimen name = "size_icon_24">24dp</dimen>
+    <dimen name = "size_button_height_36">36dp</dimen>
+    <dimen name = "size_avatar_40">40dp</dimen>
+    <dimen name = "size_touch_target_48">48dp</dimen>
+
 </resources>
