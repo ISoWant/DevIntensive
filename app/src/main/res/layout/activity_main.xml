@@ -1,19 +1,246 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.softdesign.devintensive.ui.activities.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="@+id/activity_main"
-        app:layout_constraintLeft_toLeftOf="@+id/activity_main"
-        app:layout_constraintRight_toRightOf="@+id/activity_main"
-        app:layout_constraintTop_toTopOf="@+id/activity_main" />
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:tools="http://schemas.android.com/tools"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical"
+                                            tools:context=".ui.activities.MainActivity">
 
-</android.support.constraint.ConstraintLayout>
+
+    /*****************info******************/
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/InformationBar">
+
+            <LinearLayout
+                style="@style/InformationBarElement.Side">
+
+                <TextView
+                    style="@style/InformationBarText.Value"
+                    android:text="111"/>
+
+                <TextView
+                    style="@style/InformationBarText.Description"
+                    android:text="@string/string_rating"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/InformationBarSeparator">
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/InformationBarElement.Central">
+
+                <TextView
+                    android:id="@+id/textView"
+                    style="@style/InformationBarText.Value"
+                    android:text="5415"/>
+
+                <TextView
+                    style="@style/InformationBarText.Description"
+                    android:text="@string/string_code_lines"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/InformationBarSeparator">
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/InformationBarElement.Side">
+
+                <TextView
+                    style="@style/InformationBarText.Value"
+                    android:text="12"/>
+
+                <TextView
+                    style="@style/InformationBarText.Description"
+                    android:text="@string/string_projects_count"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        /***************phone***************/
+
+        <LinearLayout
+            style="@style/externalInfoElement">
+
+            <ImageView
+                style="@style/icon.left"
+                android:src="@drawable/ic_call_black_24dp"
+                />
+
+            <LinearLayout
+                style="@style/intoInfoElement"
+                android:layout_height="@dimen/spacing_larger_72">
+
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/textInput">
+
+                    <EditText
+                        android:id="@+id/phone_et"
+                        style="@style/editInfoText"
+                        android:hint="@string/string_phone"
+                        android:inputType="phone"
+                        android:text="+7(999)209-61-69"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <ImageView
+                style="@style/icon.right"
+                android:src="@drawable/ic_phone_in_talk_black_24dp"/>
+
+        </LinearLayout>
+
+        <View
+            style="@style/bottomLine"/>
+
+        /***************e-mail***************/
+
+        <LinearLayout
+            style="@style/externalInfoElement">
+
+            <ImageView
+                style="@style/icon.left"
+                android:src="@drawable/ic_email_black_24dp"
+                />
+
+            <LinearLayout
+                style="@style/intoInfoElement"
+                android:layout_height="@dimen/spacing_larger_72">
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/textInput">
+
+                    <EditText
+                        android:id="@+id/email_et"
+                        style="@style/editInfoText"
+                        android:hint="@string/string_email"
+                        android:inputType="textEmailAddress"
+                        android:text="tony@ya.ru"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <ImageView
+                style="@style/icon.right"
+                android:src="@drawable/ic_send_black_24dp"/>
+
+        </LinearLayout>
+
+        <View
+            style="@style/bottomLine"/>
+
+        /***************vk***************/
+
+        <LinearLayout
+            style="@style/externalInfoElement">
+
+            <ImageView
+                style="@style/icon.left"
+                android:src="@drawable/vk_circle"
+                />
+
+            <LinearLayout
+                style="@style/intoInfoElement"
+                android:layout_height="@dimen/spacing_larger_72">
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/textInput">
+
+                    <EditText
+                        android:id="@+id/vk_et"
+                        style="@style/editInfoText"
+                        android:hint="@string/string_vk"
+                        android:inputType="textWebEditText"
+                        android:text="vk.com/anton_evstifeev"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <ImageView
+                style="@style/icon.right"
+                android:src="@drawable/ic_visibility_black_24dp"/>
+
+        </LinearLayout>
+
+        <View
+            style="@style/bottomLine"/>
+
+        /***************repo***************/
+
+        <LinearLayout
+            style="@style/externalInfoElement">
+
+            <ImageView
+                style="@style/icon.left"
+                android:src="@drawable/github_circle"
+                />
+
+            <LinearLayout
+                style="@style/intoInfoElement"
+                android:layout_height="@dimen/spacing_larger_72">
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/textInput">
+
+                    <EditText
+                        android:id="@+id/repo_et"
+                        style="@style/editInfoText"
+                        android:hint="@string/string_repo"
+                        android:inputType="textWebEditText"
+                        android:text="github.com/ISoWant/DevIntensive"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <ImageView
+                style="@style/icon.right"
+                android:src="@drawable/ic_visibility_black_24dp"/>
+
+        </LinearLayout>
+
+        <View
+            style="@style/bottomLine"/>
+
+        /***************about***************/
+
+        <LinearLayout
+            style="@style/externalInfoElement">
+
+            <ImageView
+                style="@style/icon.left"
+                android:src="@drawable/account_circle"
+                />
+
+            <LinearLayout
+                style="@style/intoInfoElement"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/textInput">
+
+                    <EditText
+                        android:id="@+id/about_et"
+                        style="@style/editInfoText"
+                        android:layout_width="229dp"
+                        android:layout_height="94dp"
+                        android:hint="@string/string_about"
+                        android:inputType="textMultiLine"
+                        android:text="Введите основную информацию о себе"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <ImageView
+                style="@style/icon.right"/>
+
+        </LinearLayout>
+
+        <View
+            style="@style/bottomLine"/>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
