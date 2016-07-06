@@ -10,6 +10,7 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.os.Bundle;
+<<<<<<< HEAD
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Gravity;
@@ -22,6 +23,12 @@ import com.softdesign.devintensive.R;
 import com.softdesign.devintensive.data.managers.DataManager;
 import com.softdesign.devintensive.utils.ConstantManager;
 import com.softdesign.devintensive.utils.RoundedDrawable;
+=======
+import android.util.Log;
+
+import com.softdesign.devintensive.R;
+import com.softdesign.devintensive.utils.ConstantManager;
+>>>>>>> master
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,11 +52,14 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private List<EditText> mUserInfoViews;
 
+    private static final String TAG = ConstantManager.TAG_PREFIX + "Main Activity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.d(TAG, "onCreate");
+<<<<<<< HEAD
 
         mDataManager = DataManager.getInstance();
         mNavigationView = (NavigationView) findViewById(R.id.navigation_view);
@@ -105,6 +115,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             mNavigationDrawer.openDrawer(GravityCompat.START);
         }
         return super.onOptionsItemSelected(item);
+=======
+>>>>>>> master
     }
 
     @Override
@@ -135,6 +147,15 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     protected void onDestroy() {
         super.onDestroy();
         Log.d(TAG, "onDestroy");
+<<<<<<< HEAD
+=======
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d(TAG, "onRestart");
+>>>>>>> master
     }
 
     @Override

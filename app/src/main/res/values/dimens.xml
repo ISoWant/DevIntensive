@@ -63,6 +63,7 @@
     <dimen name = "size_avatar_40">40dp</dimen>
     <dimen name="size_avatar_normal_60">60dp</dimen>
     <dimen name = "size_touch_target_48">48dp</dimen>
+<<<<<<< HEAD
     <dimen name="line_size_1">1dp</dimen>
 
     <!--Font-->
@@ -74,5 +75,11 @@
     <dimen name="size_profile_image_256">256dp</dimen>
     <dimen name="fab_right_space">8dp</dimen>
 
+=======
+    <dimen name="line_size">1dp</dimen>
+
+    <!--Font-->
+    <dimen name="font_normal_14">14dp</dimen>
+>>>>>>> master
 
 </resources>
