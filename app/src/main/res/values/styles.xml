@@ -3,9 +3,9 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
     </style>
 
     <!-- Icons. Standard size -->
@@ -55,58 +55,9 @@
 
     <style name="bottomLine">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">@dimen/line_size</item>
+        <item name="android:layout_height">@dimen/line_size_1</item>
         <item name="android:background">@color/grey_light</item>
         <item name="android:layout_marginLeft">@dimen/spacing_larger_72</item>
-    </style>
-
-    <style name="InformationBar">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:background">@color/grey</item>
-        <item name="android:orientation">horizontal</item>
-        <item name="android:gravity">center</item>
-        <item name="android:paddingTop">@dimen/size_medium_32</item>
-        <item name="android:paddingBottom">@dimen/size_medium_32</item>
-    </style>
-
-    <style name="InformationBarElement">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:orientation">vertical</item>
-        <item name="android:gravity">center</item>
-        <item name="android:paddingLeft">@dimen/spacing_normal_16</item>
-        <item name="android:paddingRight">@dimen/spacing_normal_16</item>
-    </style>
-
-    <style name="InformationBarElement.Side" parent="InformationBarElement">
-        <item name="android:layout_weight">0.25</item>
-    </style>
-
-    <style name="InformationBarElement.Central" parent="InformationBarElement">
-        <item name="android:layout_weight">0.45</item>
-    </style>
-
-    <style name="InformationBarSeparator">
-        <item name="android:layout_width">1dp</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:background">@color/white</item>
-    </style>
-
-    <style name="InformationBarText">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:gravity">center</item>
-        <item name="android:textColor">@color/grey_light</item>
-    </style>
-
-    <style name="InformationBarText.Description" parent="InformationBarText">
-        <item name="android:textSize">@dimen/font_normal_14</item>
-        <item name="android:fontFamily">sans-serif-condensed"</item>
-    </style>
-
-    <style name="InformationBarText.Value" parent="InformationBarText">
-        <item name="android:textSize">@dimen/spacing_normal_16</item>
     </style>
 
     <!-- Show progress -->
@@ -122,5 +73,13 @@
     
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <!-- -Drawer header-->
+    <style name="DrawerHeaderText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/font_normal_14</item>
+    </style>
 
 </resources>

@@ -6,51 +6,66 @@
     android:id="@+id/navigation_drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activities.MainActivity"
-    >
+    tools:context=".ui.activities.MainActivity">
 
     <android.support.design.widget.CoordinatorLayout
-    android:id="@+id/main_coordinator_container"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <android.support.design.widget.AppBarLayout
-        android:id="@+id/appbar_layout"
+        android:id="@+id/main_coordinator_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="match_parent"
+        >
 
-        <android.support.design.widget.CollapsingToolbarLayout
-            android:id="@+id/collapsing_toolbar"
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:contentScrim="@color/colorPrimary"
-            android:fitsSystemWindows="true"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            android:background="@color/grey"
+            android:theme="@style/AppTheme.AppBarOverlay">
 
-
-            <ImageView
-                android:id="@+id/img_user_photo"
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/size_profile_image_256"
-                android:fitsSystemWindows="true"
-                android:scaleType="centerCrop"
-                android:src="@drawable/userphoto"
-                />
-
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:theme="@style/AppTheme.PopupOverlay"
-                android:titleTextColor="@color/white"
-                app:layout_collapseMode="pin"/>
-
-        </android.support.design.widget.CollapsingToolbarLayout>
+                android:layout_height="wrap_content"
+                app:contentScrim="@color/grey"
+                app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Title"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                >
 
 
-    </android.support.design.widget.AppBarLayout>
+                <ImageView
+                    android:id="@+id/img_user_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_profile_image_256"
+                    android:fitsSystemWindows="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/userphoto"
+                    />
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_marginTop="@dimen/spacing_medial_24"
+                    android:theme="@style/AppTheme.PopupOverlay"
+                    android:titleTextColor="@color/white"
+                    app:layout_collapseMode="pin"
+                    />
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:id="@+id/scoreBox_layout"
+            android:layout_width="match_parent"
+            android:layout_height="112dp"
+            android:background="@color/grey"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_behavior=".ui.view.behaviors.AppBarBehavior">
+
+            <include layout="@layout/activity_main_scorebox"/>
+        </LinearLayout>
 
 
         <!--    scrolling    -->
@@ -59,7 +74,8 @@
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            app:layout_anchor="@id/scoreBox_layout"
+            app:layout_behavior=".ui.view.behaviors.NestedScrollBehavior">
 
 
             <!--    info    -->
@@ -68,57 +84,6 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <LinearLayout
-                    style="@style/InformationBar">
-
-                    <LinearLayout
-                        style="@style/InformationBarElement.Side">
-
-                        <TextView
-                            style="@style/InformationBarText.Value"
-                            android:text="111"/>
-
-                        <TextView
-                            style="@style/InformationBarText.Description"
-                            android:text="@string/string_rating"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/InformationBarSeparator">
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/InformationBarElement.Central">
-
-                        <TextView
-                            android:id="@+id/textView"
-                            style="@style/InformationBarText.Value"
-                            android:text="5415"/>
-
-                        <TextView
-                            style="@style/InformationBarText.Description"
-                            android:text="@string/string_code_lines"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/InformationBarSeparator">
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/InformationBarElement.Side">
-
-                        <TextView
-                            style="@style/InformationBarText.Value"
-                            android:text="12"/>
-
-                        <TextView
-                            style="@style/InformationBarText.Description"
-                            android:text="@string/string_projects_count"
-                            />
-                    </LinearLayout>
-                </LinearLayout>
-
-
                 <!--    phone   -->
 
                 <LinearLayout
@@ -126,7 +91,7 @@
 
                     <ImageView
                         style="@style/icon.left"
-                        android:src="@drawable/ic_call_black_24dp"
+                        android:src="@drawable/ic_call_grey_24dp"
                         />
 
                     <LinearLayout
@@ -149,7 +114,7 @@
                     <ImageView
                         android:id="@+id/call_img"
                         style="@style/icon.right"
-                        android:src="@drawable/ic_phone_in_talk_black_24dp"/>
+                        android:src="@drawable/ic_phone_in_talk_grey_24dp"/>
 
                 </LinearLayout>
 
@@ -163,7 +128,7 @@
 
                     <ImageView
                         style="@style/icon.left"
-                        android:src="@drawable/ic_email_black_24dp"
+                        android:src="@drawable/ic_email_grey_24dp"
                         />
 
                     <LinearLayout
@@ -184,7 +149,7 @@
 
                     <ImageView
                         style="@style/icon.right"
-                        android:src="@drawable/ic_send_black_24dp"/>
+                        android:src="@drawable/ic_send_grey_24dp"/>
 
                 </LinearLayout>
 
@@ -198,7 +163,7 @@
 
                     <ImageView
                         style="@style/icon.left"
-                        android:src="@drawable/vk_circle"
+                        android:src="@drawable/vk_circle_grey_24dp"
                         />
 
                     <LinearLayout
@@ -219,7 +184,7 @@
 
                     <ImageView
                         style="@style/icon.right"
-                        android:src="@drawable/ic_visibility_black_24dp"/>
+                        android:src="@drawable/ic_visibility_grey_24dp"/>
 
                 </LinearLayout>
 
@@ -233,7 +198,7 @@
 
                     <ImageView
                         style="@style/icon.left"
-                        android:src="@drawable/github_circle"
+                        android:src="@drawable/github_circle_grey_24dp"
                         />
 
                     <LinearLayout
@@ -254,7 +219,7 @@
 
                     <ImageView
                         style="@style/icon.right"
-                        android:src="@drawable/ic_visibility_black_24dp"/>
+                        android:src="@drawable/ic_visibility_grey_24dp"/>
 
                 </LinearLayout>
 
@@ -268,7 +233,7 @@
 
                     <ImageView
                         style="@style/icon.left"
-                        android:src="@drawable/account_circle"
+                        android:src="@drawable/account_circle_grey_24dp"
                         />
 
                     <LinearLayout
@@ -281,8 +246,8 @@
                             <EditText
                                 android:id="@+id/about_et"
                                 style="@style/editInfoText"
-                                android:layout_width="229dp"
-                                android:layout_height="94dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
                                 android:hint="@string/string_about"
                                 android:inputType="textMultiLine"
                                 android:text="Введите основную информацию о себе"/>
@@ -298,16 +263,16 @@
                     style="@style/bottomLine"/>
             </LinearLayout>
         </android.support.v4.widget.NestedScrollView>
-        
+
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/fab_right_space"
             android:src="@drawable/ic_create_white_24dp"
             app:layout_anchor="@id/appbar_layout"
-            app:layout_anchorGravity="bottom|right"
-            android:layout_marginRight="@dimen/fab_right_space"/>
-        
+            app:layout_anchorGravity="bottom|right"/>
+
     </android.support.design.widget.CoordinatorLayout>
 
 

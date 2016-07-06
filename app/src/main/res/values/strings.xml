@@ -10,5 +10,5 @@
     <string name="string_about">О себе</string>
 
     <string name="menu_user_profile">Профиль</string>
-    <string name="menu_team">Контакты</string>
+    <string name="menu_contacts">Контакты</string>
 </resources>

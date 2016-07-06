@@ -1,5 +1,7 @@
 package com.softdesign.devintensive.ui.activities;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -10,6 +12,7 @@ import android.support.v7.app.ActionBar;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
@@ -18,6 +21,7 @@ import android.widget.ImageView;
 import com.softdesign.devintensive.R;
 import com.softdesign.devintensive.data.managers.DataManager;
 import com.softdesign.devintensive.utils.ConstantManager;
+import com.softdesign.devintensive.utils.RoundedDrawable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +34,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private DataManager mDataManager;
     private ImageView mCallImg;
+    private ImageView mAvatarView;
+    private NavigationView mNavigationView;
     private CoordinatorLayout mCoordinatorLayout;
     private Toolbar mToolbar;
     private DrawerLayout mNavigationDrawer;
@@ -46,6 +52,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         Log.d(TAG, "onCreate");
 
         mDataManager = DataManager.getInstance();
+        mNavigationView = (NavigationView) findViewById(R.id.navigation_view);
+        View mView = mNavigationView.getHeaderView(0);
+        mAvatarView = (ImageView) mView.findViewById(R.id.avatar);
+
         mCallImg = (ImageView) findViewById(R.id.call_img);
         mCoordinatorLayout = (CoordinatorLayout) findViewById(R.id.main_coordinator_container);
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -67,6 +77,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         mFab.setOnClickListener(this);
         setupToolbar();
         setupDrawer();
+        createRoundedAvatar();
         loadUserInfoValue();
 
         if (savedInstanceState == null) {
@@ -78,6 +89,14 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             /*showSnackbar("активити уже запускалась");
             showToast("активити уже запускалась");*/
         }
+    }
+
+    private void createRoundedAvatar() {
+        BitmapFactory.Options mOptions = new BitmapFactory.Options();
+        mOptions.inMutable = false;
+        Bitmap mAvatar = BitmapFactory.decodeResource(getResources(), R.drawable.avatar, mOptions);
+        RoundedDrawable mRoundedDrawable = new RoundedDrawable(mAvatar);
+        mAvatarView.setImageDrawable(mRoundedDrawable);
     }
 
     @Override
@@ -156,6 +175,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         if (actionBar != null) {
             actionBar.setHomeAsUpIndicator(R.drawable.ic_menu_white_24dp);
             actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setTitle("Евстифеев Антон");
         }
     }
 
@@ -206,6 +226,18 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         mDataManager.getPreferencesManager().saveUserProfileData(userData);
 
     }
+
+    @Override
+    public void onBackPressed() {
+        Log.d(TAG, "onBackPressed");
+
+        if (mNavigationDrawer != null && mNavigationDrawer.isDrawerVisible(GravityCompat.START)) {
+            mNavigationDrawer.closeDrawer(Gravity.LEFT);
+        } else {
+            super.onBackPressed();
+        }
+    }
+
 
     /*private void runWithDelay(){
         final Handler handler = new Handler();
