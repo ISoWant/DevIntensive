@@ -8,4 +8,10 @@
     <string name="string_rating">Рейтинг</string>
     <string name="string_repo">Репозиторий</string>
     <string name="string_about">О себе</string>
+<<<<<<< HEAD
+
+    <string name="menu_user_profile">Профиль</string>
+    <string name="menu_contacts">Контакты</string>
+=======
+>>>>>>> master
 </resources>
