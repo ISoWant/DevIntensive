@@ -3,7 +3,7 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
-    <!--                    Mobile                  -->
+    <!--    Mobile  -->
 
     <!-- Sizes -->
 
@@ -25,6 +25,7 @@
     <dimen name="spacing_normal_16">16dp</dimen>
     <!-- List & Detail view:Status bar; -->
     <dimen name="spacing_medial_24">24dp</dimen>
+    <dimen name="spacing_medium_32">32dp</dimen>
     <!-- List:Subtitle; Navigation drawer:Account menu and list items; -->
     <dimen name="spacing_medium_48">48dp</dimen>
     <!-- List & Detail view:Toolbar; Navigation drawer:Navigation right margin-->
@@ -32,7 +33,7 @@
     <!-- List & Detail view:List item; -->
     <dimen name="spacing_larger_72">72dp</dimen>
 
-    <!--                    Tablet                  -->
+    <!--    Tablet  -->
 
     <!-- Space between content areas -->
     <dimen name="indent_tablet_smallest_8">8dp</dimen>
@@ -55,11 +56,24 @@
     <!-- Nav item left padding from screen edge -->
     <dimen name="indent_tablet_great_104">104dp</dimen>
 
-    <!--                    Touch target size                   -->
+    <!--    Touch target size   -->
 
     <dimen name = "size_icon_24">24dp</dimen>
     <dimen name = "size_button_height_36">36dp</dimen>
     <dimen name = "size_avatar_40">40dp</dimen>
+    <dimen name="size_avatar_normal_60">60dp</dimen>
     <dimen name = "size_touch_target_48">48dp</dimen>
+
+    <dimen name="line_size_1">1dp</dimen>
+
+    <!--Font-->
+    <dimen name="font_normal_14">14sp</dimen>
+    <dimen name="font_medium_16">16sp</dimen>
+    <dimen name="font_medial_24">24sp</dimen>
+
+    <dimen name="height_header_172">172dp</dimen>
+    <dimen name="size_profile_image_256">256dp</dimen>
+    <dimen name="fab_right_space">8dp</dimen>
+    <dimen name="placeholder_photo_size_90">90dp</dimen>
 
 </resources>

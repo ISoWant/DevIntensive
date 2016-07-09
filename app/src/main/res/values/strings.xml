@@ -1,3 +1,19 @@
 <resources>
-    <string name="app_name">DevIntensive</string>
+    <string name="app_name">Евстифеев Антон</string>
+    <string name="string_vk">Профиль VK</string>
+    <string name="string_email">E-mail</string>
+    <string name="string_phone">Мобильный телефон</string>
+    <string name="string_projects_count">Проектов</string>
+    <string name="string_code_lines">Написано строк кода</string>
+    <string name="string_rating">Рейтинг</string>
+    <string name="string_repo">Репозиторий</string>
+    <string name="string_about">О себе</string>
+    <string name="menu_user_profile">Профиль</string>
+    <string name="menu_contacts">Контакты</string>
+    <string name="user_profile.placeholder.image">Изменить фотографию профиля</string>
+    <string name="user_profile.dialog.gallery">Загрузить из галереи</string>
+    <string name="user_profile.dialog.camera">Сделать снимок</string>
+    <string name="user_profile.dialog.cancle">Отмена</string>
+    <string name="user_profile.dialog.title">Изменить фотографию профиля</string>
+    <string name="user_profile.chose.message">Выберите фото</string>
 </resources>

@@ -1,0 +1,194 @@
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_anchor="@id/scoreBox_layout"
+    app:layout_behavior=".ui.view.behaviors.NestedScrollBehavior">
+
+
+    <!--    info    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--    phone   -->
+
+        <LinearLayout
+            style="@style/externalInfoElement">
+
+            <ImageView
+                style="@style/icon.left"
+                android:src="@drawable/ic_call_grey_24dp"
+                />
+
+            <LinearLayout
+                style="@style/intoInfoElement"
+                android:layout_height="@dimen/spacing_larger_72">
+
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/text">
+
+                    <EditText
+                        android:id="@+id/phone_et"
+                        style="@style/editInfoText"
+                        android:hint="@string/string_phone"
+                        android:inputType="phone"
+                        android:text="+7(999)209-61-69"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/call_img"
+                style="@style/icon.right"
+                android:src="@drawable/ic_phone_in_talk_grey_24dp"/>
+
+        </LinearLayout>
+
+        <View
+            style="@style/bottomLine"/>
+
+        <!--    e-mail      -->
+
+        <LinearLayout
+            style="@style/externalInfoElement">
+
+            <ImageView
+                style="@style/icon.left"
+                android:src="@drawable/ic_email_grey_24dp"
+                />
+
+            <LinearLayout
+                style="@style/intoInfoElement"
+                android:layout_height="@dimen/spacing_larger_72">
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/text">
+
+                    <EditText
+                        android:id="@+id/email_et"
+                        style="@style/editInfoText"
+                        android:hint="@string/string_email"
+                        android:inputType="textEmailAddress"
+                        android:text="tony@ya.ru"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <ImageView
+                style="@style/icon.right"
+                android:src="@drawable/ic_send_grey_24dp"/>
+
+        </LinearLayout>
+
+        <View
+            style="@style/bottomLine"/>
+
+        <!--    vk      -->
+
+        <LinearLayout
+            style="@style/externalInfoElement">
+
+            <ImageView
+                style="@style/icon.left"
+                android:src="@drawable/vk_circle_grey_24dp"
+                />
+
+            <LinearLayout
+                style="@style/intoInfoElement"
+                android:layout_height="@dimen/spacing_larger_72">
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/text">
+
+                    <EditText
+                        android:id="@+id/vk_et"
+                        style="@style/editInfoText"
+                        android:hint="@string/string_vk"
+                        android:inputType="textWebEditText"
+                        android:text="vk.com/anton_evstifeev"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <ImageView
+                style="@style/icon.right"
+                android:src="@drawable/ic_visibility_grey_24dp"/>
+
+        </LinearLayout>
+
+        <View
+            style="@style/bottomLine"/>
+
+        <!--    repo    -->
+
+        <LinearLayout
+            style="@style/externalInfoElement">
+
+            <ImageView
+                style="@style/icon.left"
+                android:src="@drawable/github_circle_grey_24dp"
+                />
+
+            <LinearLayout
+                style="@style/intoInfoElement"
+                android:layout_height="@dimen/spacing_larger_72">
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/text">
+
+                    <EditText
+                        android:id="@+id/repo_et"
+                        style="@style/editInfoText"
+                        android:hint="@string/string_repo"
+                        android:inputType="textWebEditText"
+                        android:text="github.com/ISoWant/DevIntensive"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <ImageView
+                style="@style/icon.right"
+                android:src="@drawable/ic_visibility_grey_24dp"/>
+
+        </LinearLayout>
+
+        <View
+            style="@style/bottomLine"/>
+
+        <!--    about       -->
+
+        <LinearLayout
+            style="@style/externalInfoElement">
+
+            <ImageView
+                style="@style/icon.left"
+                android:src="@drawable/account_circle_grey_24dp"
+                />
+
+            <LinearLayout
+                style="@style/intoInfoElement"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/text">
+
+                    <EditText
+                        android:id="@+id/about_et"
+                        style="@style/editInfoText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/string_about"
+                        android:inputType="textMultiLine"
+                        android:text="Введите основную информацию о себе"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <ImageView
+                style="@style/icon.right"/>
+
+        </LinearLayout>
+
+        <View
+            style="@style/bottomLine"/>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
